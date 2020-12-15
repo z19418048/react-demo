@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://192.168.58.100/external_api.js'></script>
+        <script src='https://192.168.58.100/external_api.js'></script>  
+        <style>
+
+            .liang{
+                color:black;
+                width: 100px;
+                height: 50px;
+                background-color: green;
+            }
+        </style>
+</head>
+<body>
+    <div>
+        <p>株式会社 lets AI</p>
+        <input type="button" value="开始会议" class="liang" onclick=javascrtpt:jump() />
+        <div id="meet"></div>
+    </div>
+    
+    <script>
+    function jump(){
+        const domain = '192.168.58.100';
+            const options = {
+            roomName: 'JitsiMeetAPIExample',
+            width: 700,
+            height: 500,
+            userInfo: [
+                {   
+                email: '953829746@qq.com',
+                displayName: '朱祉龙'
+                },
+                {
+                email: 'liangpeng@163.com',
+                displayName: 'Liangjunpeng'
+                }
+            ],
+        parentNode: document.querySelector('#meet')
+        };
+        const api = new JitsiMeetExternalAPI(domain, options);
+}
+       
+</script>    
+        
+
+</body>
+</html>
